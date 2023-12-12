@@ -9,3 +9,13 @@ export const List = styled.ul `
     margin: 20px auto 0;
   
 `
+export const Contact = styled.li `
+    display:flex;
+    justify-content: space-between;
+    gap: 20px; 
+    align-items: center; 
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+`

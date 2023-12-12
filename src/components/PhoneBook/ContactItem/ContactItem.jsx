@@ -1,16 +1,22 @@
 import { BsFillTrash3Fill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../../redux/contactsSlice";
 
-import {Contact, Name, Number, RemoveButton }  from "./ContactItem.styled"
+import {Name, Number, RemoveButton }  from "./ContactItem.styled"
 
-function ContactItem({ id, name, number, onDeleteContact}) {
+
+function ContactItem({ contact }) {
+    const dispatch = useDispatch(); 
+    const onDeleteContact = () => dispatch(deleteContact(contact.id))
     return (
-        <Contact  key={id}>
-            <Name>{name}:<Number>{number}</Number>
-            </Name>
-            <RemoveButton onClick={()=> onDeleteContact(id)} type="button">
+        <>
+            <Name>{contact.name}:
+                <Number>{contact.number}</Number>
+            </Name> 
+            <RemoveButton onClick={onDeleteContact} type="button"> 
                 <BsFillTrash3Fill />                
-            </RemoveButton>
-        </Contact >
+            </RemoveButton> 
+        </>              
     )
 }
 
