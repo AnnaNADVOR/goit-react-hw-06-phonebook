@@ -4,11 +4,6 @@ import { List, Contact } from "./ContactList.styled";
 import { getContacts, getFilter } from "../../../redux/selectors";
 
 
-
-
-
-
-
 function ContactList() {
     const contacts = useSelector(getContacts); 
     const filter = useSelector(getFilter); 
@@ -27,7 +22,7 @@ function ContactList() {
                 <Contact key={contact.id}>
                     <ContactItem contact={contact}/>
                 </Contact>     
-            )}
+            )}       
         </List>              
     )
 }
