@@ -9,7 +9,7 @@ import Notification from "../Notification/Notification";
 
 function ContactSearch() { 
     const contacts = useSelector(getContacts); 
-   
+   console.log(contacts)
     const filterValue = useSelector(state => state.filter.name); 
     const dispatch = useDispatch(); 
     const onChange = event => {
