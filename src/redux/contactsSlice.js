@@ -11,7 +11,7 @@ export const contactsSlice = createSlice({
                 state.contactsList.push(action.payload);                
             },
             prepare(name, number) {
-                const id = nanoid()
+                const id = nanoid();
                 return {
                     payload: {
                         name,
@@ -19,8 +19,7 @@ export const contactsSlice = createSlice({
                         id,
                     },
                 };
-            },
-           
+            },           
         },
         deleteContact(state, action) {
             state.contactsList = state.contactsList.filter(contact => contact.id !== action.payload);

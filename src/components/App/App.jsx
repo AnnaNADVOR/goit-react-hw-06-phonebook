@@ -10,19 +10,13 @@ import {
 } from "./App.styled";
 
 export default function App() {
-
   return (
     <Container>
-       <MainTitle>Phone<Titleparth>Book</Titleparth></MainTitle>
-       <ContactForm/>
+      <MainTitle>Phone<Titleparth>Book</Titleparth></MainTitle>
+      <ContactForm/>
       <SecondaryTitle>Contacts</SecondaryTitle>
-<Filter/>
-
-
-     
-      <ContactList />
-
-   
-      </Container>
+      <Filter/>    
+      <ContactList />  
+    </Container>
   )
 }
